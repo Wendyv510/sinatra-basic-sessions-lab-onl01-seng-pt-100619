@@ -14,6 +14,7 @@ class App < Sinatra::Base
   
   
   post '/checkout' do
+    session["item"]="socks"
     @session = session 
     item = Cart.new(item: params[:item]) 
     
